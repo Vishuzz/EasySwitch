@@ -20,40 +20,73 @@ struct HomeView: View {
     
     var body: some View {
         NavigationView {
-            ScrollView {
-                LazyVGrid(columns: columns, spacing: 20) {
-                    ForEach(ConversionType.allCases) { type in
-                        ConversionCard(type: type)
-                            .onTapGesture {
+            ZStack {
+                Theme.background.ignoresSafeArea()
+                DotGridPattern()
+                
+                ScrollView {
+                    LazyVGrid(columns: columns, spacing: 20) {
+                        ForEach(Array(ConversionType.allCases.enumerated()), id: \.element) { index, type in
+                            let cardColor = Theme.cardColors[index % Theme.cardColors.count]
+                            
+                            Button(action: {
                                 viewModel.selectConversion(type)
                                 showFilePicker = true
+                            }) {
+                                ConversionCard(type: type, color: cardColor)
                             }
+                            .buttonStyle(NeoBrutalButtonStyle(backgroundColor: cardColor, cornerRadius: 0))
+                        }
                     }
-                }
-                .padding()
-            }
-            
-            if viewModel.isConverting{
-                ProgressView("Converting...")
                     .padding()
-                    .background(.ultraThinMaterial)
-                    .cornerRadius(16)
-            }
-            if let fileURL = viewModel.convertedFileURL{
-                VStack{
-                    Spacer()
-                    
-                    Text("Conversion Complete!")
-                        .font(.headline)
-                    Text(fileURL.lastPathComponent)
-                        .font(.subheadline)
-                        .foregroundColor(.gray)
                 }
-                .padding()
+                
+                if viewModel.isConverting{
+                    VStack {
+                        ProgressView()
+                            .scaleEffect(1.5)
+                            .padding(.bottom, 8)
+                        Text("Converting...")
+                            .font(.system(.headline, design: .monospaced).weight(.black))
+                    }
+                    .padding(24)
+                    .neoBrutalism(backgroundColor: .white, cornerRadius: 0)
+                }
+                if let fileURL = viewModel.convertedFileURL{
+                    VStack(alignment: .leading, spacing: 12) {
+                        Text("CONVERSION COMPLETE!")
+                            .font(.system(.title3, design: .monospaced).weight(.black))
+                        
+                        Text(fileURL.lastPathComponent)
+                            .font(.system(.body, design: .monospaced).weight(.bold))
+                            .lineLimit(1)
+                            .truncationMode(.middle)
+                        
+                        Button(action: {
+                            // Optionally add share action later
+                        }) {
+                            Text("OK")
+                                .font(.system(.headline, design: .monospaced).weight(.black))
+                                .frame(maxWidth: .infinity)
+                                .padding(.vertical, 12)
+                        }
+                        .buttonStyle(NeoBrutalButtonStyle(backgroundColor: Theme.nbYellow, cornerRadius: 0))
+                        .padding(.top, 8)
+                    }
+                    .padding(20)
+                    .frame(maxWidth: 300)
+                    .neoBrutalism(backgroundColor: .white, cornerRadius: 0)
+                    .padding()
+                }
             }
-        }
-            
-            .navigationTitle("EasySwitch")
+            .navigationTitle("EASYSWITCH")
+            .navigationBarTitleDisplayMode(.inline)
+            .toolbar {
+                ToolbarItem(placement: .principal) {
+                    Text("EASYSWITCH")
+                        .font(.system(.title, design: .monospaced).weight(.black))
+                }
+            }
             .fileImporter(
                 isPresented: $showFilePicker,
                 allowedContentTypes: [.item]
@@ -69,24 +102,26 @@ struct HomeView: View {
             }
         }
     }
+}
 
 struct ConversionCard: View {
     let type: ConversionType
+    let color: Color
     
     var body: some View {
         VStack(spacing: 15) {
             Image(systemName: type.iconName)
-                .font(.system(size: 30))
+                .font(.system(size: 34, weight: .black))
+                .foregroundColor(.black)
             
-            Text(type.rawValue)
-                .font(.headline)
+            Text(type.rawValue.uppercased())
+                .font(.system(.headline, design: .monospaced).weight(.black))
+                .foregroundColor(.black)
                 .multilineTextAlignment(.center)
         }
         .frame(maxWidth: .infinity)
         .frame(height: 140)
-        .background(Color(.systemGray6))
-        .cornerRadius(20)
-        .shadow(radius: 3)
+        // Background and border are handled by the button style
     }
 }
 

@@ -7,6 +7,8 @@ enum ConversionType: String, CaseIterable, Identifiable {
     case pdfToImage = "PDF to Image"
     case textToPDF = "Text to PDF"
     case pdfToText = "PDF to Text"
+    case pagesToPDF = "Pages to PDF"
+    case pdfToPages = "PDF to Pages"
     
     var id: String { rawValue }
     
@@ -24,6 +26,10 @@ enum ConversionType: String, CaseIterable, Identifiable {
             return "text.alignleft"
         case .pdfToText:
             return "doc.plaintext"
+        case .pagesToPDF:
+            return "doc.text.fill"
+        case .pdfToPages:
+            return "doc.richtext.fill"
         }
     }
 }
