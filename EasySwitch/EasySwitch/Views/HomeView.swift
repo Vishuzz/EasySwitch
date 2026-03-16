@@ -35,8 +35,8 @@ struct HomeView: View {
                             .font(.system(size: 16, weight: .medium, design: .default))
                             .foregroundColor(Color(red: 0.4, green: 0.5, blue: 0.5))
                     }
-                    .padding(.top, 20)
-                    .padding(.bottom, 30)
+                    .padding(.top, 0)
+                    .padding(.bottom, 10)
                     
                     ScrollView {
                         LazyVGrid(columns: columns, spacing: 20) {
@@ -60,6 +60,8 @@ struct HomeView: View {
                         // Add extra padding at the bottom so the FAB doesn't cover content
                         .padding(.bottom, 100)
                     }
+                    
+                    Spacer() // Push everything above this to the top
                 }
                 
                 // Converting Overlay
@@ -128,7 +130,6 @@ struct HomeView: View {
                     .opacity(viewModel.selectedConversion == nil ? 0.5 : 1.0)
                     .padding(.bottom, 0)
                 }
-                .ignoresSafeArea(.all, edges: .bottom)
             }
             .navigationBarHidden(true)
             .fileImporter(
