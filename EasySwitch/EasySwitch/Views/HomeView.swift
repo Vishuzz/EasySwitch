@@ -83,7 +83,8 @@ struct HomeView: View {
             .navigationBarTitleDisplayMode(.inline)
             .toolbar {
                 ToolbarItem(placement: .principal) {
-                    Text("EASYSWITCH")
+                    (Text("EASY") + Text("SWITCH").foregroundColor(.red))
+                        .tracking(3)
                         .font(.system(.title, design: .monospaced).weight(.black))
                 }
             }

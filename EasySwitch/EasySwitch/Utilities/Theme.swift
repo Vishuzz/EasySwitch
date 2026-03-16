@@ -8,7 +8,7 @@ struct Theme {
     static let nbPurple = Color(red: 0.7, green: 0.5, blue: 1.0)
     static let nbOrange = Color(red: 1.0, green: 0.6, blue: 0.2)
     
-    static let background = Color(red: 0.95, green: 0.95, blue: 0.9)
+    static let background = Color(red: 0.35, green: 0.95, blue: 0.6) // Vibrant Mint Green
     
     static let cardColors: [Color] = [nbYellow, nbPink, nbCyan, nbGreen, nbPurple, nbOrange]
 }
@@ -55,7 +55,7 @@ struct NeoBrutalButtonStyle: ButtonStyle {
 struct DotGridPattern: View {
     var spacing: CGFloat = 30
     var dotSize: CGFloat = 3
-    var dotColor: Color = Color.blue.opacity(0.2)
+    var dotColor: Color = Color.black.opacity(0.15) // Darker dots for contrast against green
     
     var body: some View {
         GeometryReader { geometry in
