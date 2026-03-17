@@ -21,13 +21,48 @@
 			remoteGlobalIDString = 8B04BF0F2F67CA75007272CD;
 			remoteInfo = EasySwitch;
 		};
+		8B04BFE82F6922B3007272CD /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8B04BF082F67CA75007272CD /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8B04BFDA2F6922B1007272CD;
+			remoteInfo = EasySwitchMac;
+		};
+		8B04BFF22F6922B3007272CD /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8B04BF082F67CA75007272CD /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8B04BFDA2F6922B1007272CD;
+			remoteInfo = EasySwitchMac;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		8B04BF102F67CA75007272CD /* EasySwitch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EasySwitch.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8B04BF1D2F67CA78007272CD /* EasySwitchTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EasySwitchTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8B04BF272F67CA78007272CD /* EasySwitchUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EasySwitchUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		8B04BFDB2F6922B1007272CD /* EasySwitchMac.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EasySwitchMac.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		8B04BFE72F6922B3007272CD /* EasySwitchMacTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EasySwitchMacTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		8B04BFF12F6922B3007272CD /* EasySwitchMacUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EasySwitchMacUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		8B04C0042F692443007272CD /* Exceptions for "EasySwitch" folder in "EasySwitchMac" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Models/ConversionType.swift,
+				Models/DocumentFile.swift,
+				Networking/APIManager.swift,
+				Networking/UploadManager.swift,
+				Services/FileConverterService.swift,
+				Utilities/Constants.swift,
+				Utilities/FileHelper.swift,
+				ViewModels/ConverterViewModel.swift,
+				Views/HomeView.swift,
+			);
+			target = 8B04BFDA2F6922B1007272CD /* EasySwitchMac */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		8B04BF202F67CA78007272CD /* EasySwitchTests */ = {
@@ -42,7 +77,25 @@
 		};
 		8B04BF422F67CF09007272CD /* EasySwitch */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				8B04C0042F692443007272CD /* Exceptions for "EasySwitch" folder in "EasySwitchMac" target */,
+			);
 			path = EasySwitch;
+			sourceTree = "<group>";
+		};
+		8B04BFDC2F6922B1007272CD /* EasySwitchMac */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = EasySwitchMac;
+			sourceTree = "<group>";
+		};
+		8B04BFEA2F6922B3007272CD /* EasySwitchMacTests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = EasySwitchMacTests;
+			sourceTree = "<group>";
+		};
+		8B04BFF42F6922B3007272CD /* EasySwitchMacUITests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = EasySwitchMacUITests;
 			sourceTree = "<group>";
 		};
 /* End PBXFileSystemSynchronizedRootGroup section */
@@ -69,6 +122,27 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		8B04BFD82F6922B1007272CD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8B04BFE42F6922B3007272CD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8B04BFEE2F6922B3007272CD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -78,6 +152,9 @@
 				8B04BF422F67CF09007272CD /* EasySwitch */,
 				8B04BF202F67CA78007272CD /* EasySwitchTests */,
 				8B04BF2A2F67CA78007272CD /* EasySwitchUITests */,
+				8B04BFDC2F6922B1007272CD /* EasySwitchMac */,
+				8B04BFEA2F6922B3007272CD /* EasySwitchMacTests */,
+				8B04BFF42F6922B3007272CD /* EasySwitchMacUITests */,
 				8B04BF112F67CA75007272CD /* Products */,
 			);
 			sourceTree = "<group>";
@@ -88,6 +165,9 @@
 				8B04BF102F67CA75007272CD /* EasySwitch.app */,
 				8B04BF1D2F67CA78007272CD /* EasySwitchTests.xctest */,
 				8B04BF272F67CA78007272CD /* EasySwitchUITests.xctest */,
+				8B04BFDB2F6922B1007272CD /* EasySwitchMac.app */,
+				8B04BFE72F6922B3007272CD /* EasySwitchMacTests.xctest */,
+				8B04BFF12F6922B3007272CD /* EasySwitchMacUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -163,6 +243,74 @@
 			productReference = 8B04BF272F67CA78007272CD /* EasySwitchUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
+		8B04BFDA2F6922B1007272CD /* EasySwitchMac */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8B04BFFF2F6922B3007272CD /* Build configuration list for PBXNativeTarget "EasySwitchMac" */;
+			buildPhases = (
+				8B04BFD72F6922B1007272CD /* Sources */,
+				8B04BFD82F6922B1007272CD /* Frameworks */,
+				8B04BFD92F6922B1007272CD /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				8B04BFDC2F6922B1007272CD /* EasySwitchMac */,
+			);
+			name = EasySwitchMac;
+			packageProductDependencies = (
+			);
+			productName = EasySwitchMac;
+			productReference = 8B04BFDB2F6922B1007272CD /* EasySwitchMac.app */;
+			productType = "com.apple.product-type.application";
+		};
+		8B04BFE62F6922B3007272CD /* EasySwitchMacTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8B04C0002F6922B3007272CD /* Build configuration list for PBXNativeTarget "EasySwitchMacTests" */;
+			buildPhases = (
+				8B04BFE32F6922B3007272CD /* Sources */,
+				8B04BFE42F6922B3007272CD /* Frameworks */,
+				8B04BFE52F6922B3007272CD /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				8B04BFE92F6922B3007272CD /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				8B04BFEA2F6922B3007272CD /* EasySwitchMacTests */,
+			);
+			name = EasySwitchMacTests;
+			packageProductDependencies = (
+			);
+			productName = EasySwitchMacTests;
+			productReference = 8B04BFE72F6922B3007272CD /* EasySwitchMacTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		8B04BFF02F6922B3007272CD /* EasySwitchMacUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8B04C0012F6922B3007272CD /* Build configuration list for PBXNativeTarget "EasySwitchMacUITests" */;
+			buildPhases = (
+				8B04BFED2F6922B3007272CD /* Sources */,
+				8B04BFEE2F6922B3007272CD /* Frameworks */,
+				8B04BFEF2F6922B3007272CD /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				8B04BFF32F6922B3007272CD /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				8B04BFF42F6922B3007272CD /* EasySwitchMacUITests */,
+			);
+			name = EasySwitchMacUITests;
+			packageProductDependencies = (
+			);
+			productName = EasySwitchMacUITests;
+			productReference = 8B04BFF12F6922B3007272CD /* EasySwitchMacUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -184,6 +332,17 @@
 						CreatedOnToolsVersion = 26.3;
 						TestTargetID = 8B04BF0F2F67CA75007272CD;
 					};
+					8B04BFDA2F6922B1007272CD = {
+						CreatedOnToolsVersion = 26.3;
+					};
+					8B04BFE62F6922B3007272CD = {
+						CreatedOnToolsVersion = 26.3;
+						TestTargetID = 8B04BFDA2F6922B1007272CD;
+					};
+					8B04BFF02F6922B3007272CD = {
+						CreatedOnToolsVersion = 26.3;
+						TestTargetID = 8B04BFDA2F6922B1007272CD;
+					};
 				};
 			};
 			buildConfigurationList = 8B04BF0B2F67CA75007272CD /* Build configuration list for PBXProject "EasySwitch" */;
@@ -203,6 +362,9 @@
 				8B04BF0F2F67CA75007272CD /* EasySwitch */,
 				8B04BF1C2F67CA78007272CD /* EasySwitchTests */,
 				8B04BF262F67CA78007272CD /* EasySwitchUITests */,
+				8B04BFDA2F6922B1007272CD /* EasySwitchMac */,
+				8B04BFE62F6922B3007272CD /* EasySwitchMacTests */,
+				8B04BFF02F6922B3007272CD /* EasySwitchMacUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -223,6 +385,27 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		8B04BF252F67CA78007272CD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8B04BFD92F6922B1007272CD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8B04BFE52F6922B3007272CD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8B04BFEF2F6922B3007272CD /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -253,6 +436,27 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		8B04BFD72F6922B1007272CD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8B04BFE32F6922B3007272CD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8B04BFED2F6922B3007272CD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -265,6 +469,16 @@
 			isa = PBXTargetDependency;
 			target = 8B04BF0F2F67CA75007272CD /* EasySwitch */;
 			targetProxy = 8B04BF282F67CA78007272CD /* PBXContainerItemProxy */;
+		};
+		8B04BFE92F6922B3007272CD /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 8B04BFDA2F6922B1007272CD /* EasySwitchMac */;
+			targetProxy = 8B04BFE82F6922B3007272CD /* PBXContainerItemProxy */;
+		};
+		8B04BFF32F6922B3007272CD /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 8B04BFDA2F6922B1007272CD /* EasySwitchMac */;
+			targetProxy = 8B04BFF22F6922B3007272CD /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -395,6 +609,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 364UATWW9Y;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -426,6 +641,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 364UATWW9Y;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -530,6 +746,154 @@
 			};
 			name = Release;
 		};
+		8B04BFF92F6922B3007272CD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 364UATWW9Y;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = name.Vishek.EasySwitchMac;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		8B04BFFA2F6922B3007272CD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 364UATWW9Y;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = name.Vishek.EasySwitchMac;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		8B04BFFB2F6922B3007272CD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 364UATWW9Y;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 26.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = name.Vishek.EasySwitchMacTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRING_CATALOG_GENERATE_SYMBOLS = NO;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/EasySwitchMac.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/EasySwitchMac";
+			};
+			name = Debug;
+		};
+		8B04BFFC2F6922B3007272CD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 364UATWW9Y;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 26.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = name.Vishek.EasySwitchMacTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRING_CATALOG_GENERATE_SYMBOLS = NO;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/EasySwitchMac.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/EasySwitchMac";
+			};
+			name = Release;
+		};
+		8B04BFFD2F6922B3007272CD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 364UATWW9Y;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = name.Vishek.EasySwitchMacUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRING_CATALOG_GENERATE_SYMBOLS = NO;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = EasySwitchMac;
+			};
+			name = Debug;
+		};
+		8B04BFFE2F6922B3007272CD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 364UATWW9Y;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = name.Vishek.EasySwitchMacUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRING_CATALOG_GENERATE_SYMBOLS = NO;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = EasySwitchMac;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -565,6 +929,33 @@
 			buildConfigurations = (
 				8B04BF382F67CA78007272CD /* Debug */,
 				8B04BF392F67CA78007272CD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8B04BFFF2F6922B3007272CD /* Build configuration list for PBXNativeTarget "EasySwitchMac" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8B04BFF92F6922B3007272CD /* Debug */,
+				8B04BFFA2F6922B3007272CD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8B04C0002F6922B3007272CD /* Build configuration list for PBXNativeTarget "EasySwitchMacTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8B04BFFB2F6922B3007272CD /* Debug */,
+				8B04BFFC2F6922B3007272CD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8B04C0012F6922B3007272CD /* Build configuration list for PBXNativeTarget "EasySwitchMacUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8B04BFFD2F6922B3007272CD /* Debug */,
+				8B04BFFE2F6922B3007272CD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
